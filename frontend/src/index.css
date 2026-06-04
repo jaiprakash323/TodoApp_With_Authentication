@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Form Styles */
+.form-container {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #5a67d8;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.link-btn {
+  background: none;
+  color: #667eea;
+  margin-top: 15px;
+}
+
+.link-btn:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-message {
+  background: #efe;
+  color: #3c3;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Todo Styles */
+.todo-container {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.todo-header h1 {
+  color: #333;
+  font-size: 24px;
+}
+
+.logout-btn {
+  width: auto;
+  padding: 8px 20px;
+  background: #f44336;
+}
+
+.logout-btn:hover {
+  background: #da190b;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.todo-form button {
+  width: auto;
+  padding: 12px 30px;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.todo-item:hover {
+  transform: translateX(5px);
+}
+
+.todo-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.todo-title {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.todo-title.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.edit-btn, .delete-btn {
+  width: auto;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background: #4caf50;
+}
+
+.edit-btn:hover {
+  background: #45a049;
+}
+
+.delete-btn {
+  background: #f44336;
+}
+
+.delete-btn:hover {
+  background: #da190b;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #667eea;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .form-container,
+  .todo-container {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .todo-form {
+    flex-direction: column;
+  }
+  
+  .todo-item {
+    flex-wrap: wrap;
+  }
+  
+  .todo-title {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .logout-btn {
+    width: 100%;
+  }
+  
+  .todo-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .edit-btn, .delete-btn {
+    width: 100%;
+  }
+}
